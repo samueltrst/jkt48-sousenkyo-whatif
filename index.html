@@ -10,13 +10,7 @@
 
 <style>
 .ranking-member{
-@media(max-width:768px){
-
-.pyramid-row{
-    flex-wrap:wrap;
-}
-
-}
+display:flex;
 align-items:center;
 gap:12px;
 }
@@ -117,9 +111,9 @@ z-index:-1;
 }
 
 .container{
-    width:95%;
-    max-width:1200px;
-    margin:auto;
+width:min(1400px,95%);
+margin:auto;
+padding:30px 0 80px;
 }
 
 .hero{
@@ -629,42 +623,6 @@ border-radius:50%;
 object-fit:cover;
 }
 
-@media (max-width:768px){
-
-    .pyramid{
-        transform:scale(.7);
-        transform-origin:top center;
-    }
-
-    .member-card{
-        margin:5px;
-    }
-
-    table{
-        width:100%;
-        font-size:.85rem;
-    }
-
-    th,
-    td{
-        padding:8px;
-    }
-
-    .ranking-container{
-        overflow-x:auto;
-    }
-
-    .banner-title{
-        font-size:1.5rem;
-    }
-
-    .banner-subtitle{
-        font-size:.8rem;
-    }
-}
-.table-wrapper{
-    overflow-x:auto;
-}
 </style>
 </head>
 
@@ -759,7 +717,6 @@ JKT48 28th Single Coupling Song
 📋 FULL RANKING
 </div>
 
-<div class="table-wrapper">
 <table>
 
 <thead>
@@ -776,7 +733,6 @@ JKT48 28th Single Coupling Song
 </tbody>
 
 </table>
-</div>
 
 </div>
 
@@ -785,12 +741,13 @@ JKT48 28th Single Coupling Song
 <script>
 
 const members = [
+
 {
 rank:1,
 name:"Fiony Alveria",
 team:"Love",
 votes:238613,
-photo:"fiony.jpg",
+photo:"img/fiony.jpg",
 profile:"https://jkt48.com/member/detail?member=fiony-alveria-91&type=LOVE",
 },
 
@@ -799,7 +756,7 @@ rank:2,
 name:"Angelina Christy",
 team:"Passion",
 votes:223731,
-photo:"christy.jpg",
+photo:"img/christy.jpg",
 profile:"https://jkt48.com/member/detail?member=angelina-christy-22&type=PASSION",
 },
 
@@ -808,7 +765,7 @@ rank:3,
 name:"Jessica Chandra",
 team:"Passion",
 votes:188732,
-photo:"jessi.jpg",
+photo:"img/jessi.jpg",
 profile:"https://jkt48.com/member/detail?member=jessica-chandra-127&type=PASSION",
 },
 
@@ -817,7 +774,7 @@ rank:4,
 name:"Mutiara Azzahra",
 team:"Passion",
 votes:155988,
-photo:"muthe.jpg",
+photo:"img/muthe.jpg",
 profile:"https://jkt48.com/member/detail?member=mutiara-azzahra-166&type=PASSION",
 },
 
@@ -826,7 +783,7 @@ rank:5,
 name:"Grace Octaviani",
 team:"Love",
 votes:90731,
-photo:"gracie.jpg",
+photo:"img/gracie.jpg",
 profile:"https://jkt48.com/member/detail?member=grace-octaviani-105&type=LOVE",
 },
 
@@ -835,7 +792,7 @@ rank:6,
 name:"Indah Cahya",
 team:"Love",
 votes:81920,
-photo:"indah.jpg",
+photo:"img/indah.jpg",
 profile:"https://jkt48.com/member/detail?member=indah-cahya-116&type=LOVE",
 },
 
@@ -844,7 +801,7 @@ rank:7,
 name:"Freya Jayawardana",
 team:"Dream",
 votes:80156,
-photo:"freya.jpeg",
+photo:"img/freya.jpeg",
 profile:"https://jkt48.com/member/detail?member=freya-jayawardana-94&type=DREAM",
 },
 
@@ -853,7 +810,7 @@ rank:8,
 name:"Ribka Budiman",
 team:"Passion",
 votes:78217,
-photo:"ribka.jpg",
+photo:"img/ribka.jpg",
 profile:"https://jkt48.com/member/detail?member=ribka-budiman-204&type=PASSION",
 },
 
@@ -862,7 +819,7 @@ rank:9,
 name:"Kathrina Irene",
 team:"Passion",
 votes:78013,
-photo:"kathrina.jpg",
+photo:"img/kathrina.jpg",
 profile:"https://jkt48.com/member/detail?member=kathrina-irene-143&type=PASSION",
 },
 
@@ -871,7 +828,7 @@ rank:10,
 name:"Marsha Lenathea",
 team:"Dream",
 votes:77002,
-photo:"marsha.jpg",
+photo:"img/marsha.jpg",
 profile:"https://jkt48.com/member/detail?member=marsha-lenathea-152&type=DREAM",
 },
 
@@ -880,7 +837,7 @@ rank:11,
 name:"Aurhel Alana",
 team:"Love",
 votes:76797,
-photo:"lana.jpg",
+photo:"img/lana.jpg",
 profile:"https://jkt48.com/member/detail?member=aurhel-alana-33&type=LOVE"
 },
 
@@ -889,7 +846,7 @@ rank:12,
 name:"Febriola Sinambela",
 team:"Dream",
 votes:75230,
-photo:"olla.jpg",
+photo:"img/olla.jpg",
 profile:"https://jkt48.com/member/detail?member=febriola-sinambela-88&type=DREAM",
 },
 
@@ -898,7 +855,7 @@ rank:13,
 name:"Gresella Adhalia",
 team:"Dream",
 votes:74765,
-photo:"greesel.jpg",
+photo:"img/greesel.jpg",
 profile:"https://jkt48.com/member/detail?member=greesella-adhalia-107&type=DREAM",
 },
 
@@ -907,7 +864,7 @@ rank:14,
 name:"Aurellia",
 team:"Love",
 votes:73481,
-photo:"lia.jpg",
+photo:"img/lia.jpg",
 profile:"https://jkt48.com/member/detail?member=aurellia-31&type=LOVE"
 },
 
@@ -916,7 +873,7 @@ rank:15,
 name:"Cornelia Vanisa",
 team:"Passion",
 votes:69351,
-photo:"oniel.jpg",
+photo:"img/oniel.jpg",
 profile:"https://jkt48.com/member/detail?member=cornelia-vanisa-59&type=PASSION"
 },
 
@@ -925,7 +882,7 @@ rank:16,
 name:"Abigail Rachel",
 team:"Passion",
 votes:67023,
-photo:"aralie.jpg",
+photo:"img/aralie.jpg",
 profile:"https://jkt48.com/member/detail?member=abigail-rachel-1&type=PASSION"
 },
 
@@ -934,7 +891,7 @@ rank:17,
 name:"Gita Sekar Andarini",
 team:"Dream",
 votes:66902,
-photo:"gita.jpg",
+photo:"img/gita.jpg",
 profile:"https://jkt48.com/member/detail?member=gita-sekar-andarini-104&type=DREAM"
 },
 
@@ -943,7 +900,7 @@ rank:18,
 name:"Catherina Vallencia",
 team:"Passion",
 votes:54738,
-photo:"erine.jpg",
+photo:"img/erine.jpg",
 profile:"https://jkt48.com/member/detail?member=catherina-vallencia-44&type=PASSION"
 },
 
@@ -952,7 +909,7 @@ rank:19,
 name:"Helisma Putri",
 team:"Dream",
 votes:53672,
-photo:"eli.jpg",
+photo:"img/eli.jpg",
 profile:"https://jkt48.com/member/detail?member=helisma-putri-112&type=DREAM",
 },
 
@@ -961,7 +918,7 @@ rank:20,
 name:"Adeline Wijaya",
 team:"Dream",
 votes:51489,
-photo:"delynn.jpg",
+photo:"img/delynn.jpg",
 profile:"https://jkt48.com/member/detail?member=adeline-wijaya-2&type=DREAM",
 },
 
@@ -970,7 +927,7 @@ rank:21,
 name:"Jesslyn Elly",
 team:"Dream",
 votes:50024,
-photo:"lyn.jpg",
+photo:"img/lyn.jpg",
 profile:"https://jkt48.com/member/detail?member=jesslyn-elly-131&type=DREAM"
 },
 
@@ -979,7 +936,7 @@ rank:22,
 name:"Jemima Avodie",
 team:"Trainee",
 votes:49827,
-photo:"jemima.jpg",
+photo:"img/jemima.jpg",
 profile:"https://jkt48.com/member/detail?member=jemima-evodie-123&type=TRAINEE"
 },
 
@@ -988,7 +945,7 @@ rank:23,
 name:"Michelle Alexandra",
 team:"Love",
 votes:49248,
-photo:"michie.jpg",
+photo:"img/michie.jpg",
 profile:"https://jkt48.com/member/detail?member=michelle-alexandra-159&type=LOVE"
 },
 
@@ -997,7 +954,7 @@ rank:24,
 name:"Cynthia Yaputera",
 team:"love",
 votes:48294,
-photo:"chyntia.jpg",
+photo:"img/chyntia.jpg",
 profile:"https://jkt48.com/member/detail?member=cynthia-yaputera-60&type=LOVE",
 }
 ];
