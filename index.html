@@ -516,59 +516,43 @@ background:linear-gradient(
 }
 
 /* ==========================
-SENBATSU SIZE
+   TIER 1
 ========================== */
 
-/* #1 */
-.rank1 .photo{
+.rank1 .photo,
+.rank13 .photo{
 width:220px;
 height:220px;
 }
 
-/* #2-3 */
-.rank23 .photo{
-width:165px;
-height:165px;
-}
+/* ==========================
+   TIER 2
+========================== */
 
-/* #4-7 */
-.rank47 .photo{
-width:145px;
-height:145px;
-}
-
-/* #8-12 */
-.rank812 .photo{
-width:125px;
-height:125px;
+.rank23 .photo,
+.rank1415 .photo{
+width:180px;
+height:180px;
 }
 
 /* ==========================
-UNDERGIRLS SIZE
+   TIER 3
 ========================== */
 
-/* #13 */
-.rank13 .photo{
+.rank47 .photo,
+.rank1619 .photo{
 width:150px;
 height:150px;
 }
 
-/* #14-15 */
-.rank1415 .photo{
-width:130px;
-height:130px;
-}
+/* ==========================
+   TIER 4
+========================== */
 
-/* #16-18 */
-.rank1619 .photo{
-width:115px;
-height:115px;
-}
-
-/* #19-24 */
+.rank812 .photo,
 .rank2024 .photo{
-width:100px;
-height:100px;
+width:125px;
+height:125px;
 }
 
 
@@ -757,23 +741,22 @@ JKT48 28th Single Coupling Song
 <script>
 
 const members = [
-
 {
 rank:1,
 name:"Fiony Alveria",
 team:"Love",
 votes:238613,
 photo:"fiony.jpg",
-profile:"https://jkt48.com/member/detail?member=fiony-alveria-91&type=",
+profile:"https://jkt48.com/member/detail?member=fiony-alveria-91&type=LOVE",
 },
 
 {
 rank:2,
 name:"Angelina Christy",
 team:"Passion",
-votes:225389,
+votes:223731,
 photo:"christy.jpg",
-profile:"https://jkt48.com/member/detail?member=angelina-christy-22&type=PASSION"
+profile:"https://jkt48.com/member/detail?member=angelina-christy-22&type=PASSION",
 },
 
 {
@@ -798,7 +781,7 @@ profile:"https://jkt48.com/member/detail?member=mutiara-azzahra-166&type=PASSION
 rank:5,
 name:"Grace Octaviani",
 team:"Love",
-votes:90371,
+votes:90731,
 photo:"gracie.jpg",
 profile:"https://jkt48.com/member/detail?member=grace-octaviani-105&type=LOVE",
 },
@@ -1012,18 +995,17 @@ ${member.rank===1 ? 'rank1' : ''}
 
 ${member.rank>=2 && member.rank<=3 ? 'rank23' : ''}
 
-${member.rank>=4 && member.rank<=6 ? 'rank46' : ''}
+${member.rank>=4 && member.rank<=7 ? 'rank47' : ''}
 
-${member.rank>=7 && member.rank<=12 ? 'rank712' : ''}
+${member.rank>=8 && member.rank<=12 ? 'rank812' : ''}
 
 ${member.rank===13 ? 'rank13' : ''}
 
 ${member.rank>=14 && member.rank<=15 ? 'rank1415' : ''}
 
-${member.rank>=16 && member.rank<=18 ? 'rank1618' : ''}
+${member.rank>=16 && member.rank<=19 ? 'rank1619' : ''}
 
-${member.rank>=19 && member.rank<=24 ? 'rank1924' : ''}
-
+${member.rank>=20 && member.rank<=24 ? 'rank2024' : ''}
 ">
 
 <div class="rank-badge">
