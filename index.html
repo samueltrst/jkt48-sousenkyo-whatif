@@ -10,7 +10,13 @@
 
 <style>
 .ranking-member{
-display:flex;
+@media(max-width:768px){
+
+.pyramid-row{
+    flex-wrap:wrap;
+}
+
+}
 align-items:center;
 gap:12px;
 }
@@ -111,9 +117,9 @@ z-index:-1;
 }
 
 .container{
-width:min(1400px,95%);
-margin:auto;
-padding:30px 0 80px;
+    width:95%;
+    max-width:1200px;
+    margin:auto;
 }
 
 .hero{
@@ -623,6 +629,42 @@ border-radius:50%;
 object-fit:cover;
 }
 
+@media (max-width:768px){
+
+    .pyramid{
+        transform:scale(.7);
+        transform-origin:top center;
+    }
+
+    .member-card{
+        margin:5px;
+    }
+
+    table{
+        width:100%;
+        font-size:.85rem;
+    }
+
+    th,
+    td{
+        padding:8px;
+    }
+
+    .ranking-container{
+        overflow-x:auto;
+    }
+
+    .banner-title{
+        font-size:1.5rem;
+    }
+
+    .banner-subtitle{
+        font-size:.8rem;
+    }
+}
+.table-wrapper{
+    overflow-x:auto;
+}
 </style>
 </head>
 
@@ -717,6 +759,7 @@ JKT48 28th Single Coupling Song
 📋 FULL RANKING
 </div>
 
+<div class="table-wrapper">
 <table>
 
 <thead>
@@ -733,6 +776,7 @@ JKT48 28th Single Coupling Song
 </tbody>
 
 </table>
+</div>
 
 </div>
 
