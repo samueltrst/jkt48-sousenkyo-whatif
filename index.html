@@ -623,205 +623,135 @@ border-radius:50%;
 object-fit:cover;
 }
 
-/* ==========================
-   RESPONSIVE TABLET
-========================== */
+</style>
 
-@media (max-width:1024px){
+<style id="royal-gala-v4">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
 
-.container{
-width:98%;
-}
-
-.section{
-padding:25px;
-}
-
-.rank1 .photo,
-.rank13 .photo{
-width:180px;
-height:180px;
-}
-
-.rank23 .photo,
-.rank1415 .photo{
-width:150px;
-height:150px;
-}
-
-.rank47 .photo,
-.rank1619 .photo{
-width:130px;
-height:130px;
-}
-
-.rank812 .photo,
-.rank2024 .photo{
-width:110px;
-height:110px;
-}
-
-}
-
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media (max-width:768px){
-
-.container{
-width:100%;
-padding:15px;
+body{
+background:linear-gradient(180deg,#fffdfd,#fff2f8,#ffe5f0)!important;
 }
 
 .hero{
-padding:30px 20px;
-border-radius:25px;
+min-height:100vh!important;
+display:flex!important;
+justify-content:center!important;
+align-items:center!important;
+flex-direction:column!important;
+background:
+radial-gradient(circle at center,rgba(255,215,0,.18),transparent 35%),
+linear-gradient(135deg,#fff,#fff6fa)!important;
 }
 
 .hero h1{
-font-size:2rem;
+font-family:'Playfair Display',serif!important;
+font-size:clamp(4rem,9vw,7rem)!important;
+background:linear-gradient(90deg,#b8860b,#ffd700,#fff5b8,#ffd700,#b8860b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.section{
-padding:18px;
-border-radius:25px;
+.section-title,.song-title{font-family:'Playfair Display',serif!important}
+
+.stats{
+margin-top:-70px;
+position:relative;
+z-index:5;
 }
 
-/* podium */
+.stat-card,.section,table{
+box-shadow:0 30px 90px rgba(0,0,0,.08)!important;
+}
 
 #podium{
-gap:12px;
+display:grid!important;
+grid-template-columns:1fr 1.3fr 1fr;
+gap:28px!important;
+max-width:1200px;
+margin:auto;
 }
 
-.podium-card img{
-width:100px;
-height:100px;
+.podium-card{
+background:rgba(255,255,255,.75);
+padding:28px;
+border-radius:36px;
+backdrop-filter:blur(20px);
+position:relative;
+overflow:hidden;
 }
 
-.first img{
-width:140px;
-height:140px;
+.podium-card:before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,.25),transparent);
+transform:translateX(-120%);
+animation:shine 8s infinite;
+}
+
+@keyframes shine{
+100%{transform:translateX(220%);}
 }
 
 .first{
-transform:none;
+transform:translateY(-55px)!important;
 }
 
-/* banner */
-
-.song-title{
-font-size:1.3rem;
+.first .podium-rank{
+font-size:2rem!important;
 }
 
-.song-subtitle{
-font-size:.85rem;
+.song-banner{
+padding:70px 35px!important;
+border-radius:35px!important;
 }
 
-.section-badge{
-font-size:.8rem;
+.member{
+background:rgba(255,255,255,.55);
+padding:16px;
+border-radius:30px;
+backdrop-filter:blur(16px);
 }
 
-/* pyramid */
-
-.pyramid{
-gap:14px;
+.member:hover{
+box-shadow:0 25px 60px rgba(255,0,120,.16);
 }
-
-.row{
-flex-wrap:nowrap;
-gap:8px;
-justify-content:center;
-}
-
-/* size mobile */
-
-.rank1 .photo,
-.rank13 .photo{
-width:120px;
-height:120px;
-}
-
-.rank23 .photo,
-.rank1415 .photo{
-width:95px;
-height:95px;
-}
-
-.rank47 .photo,
-.rank1619 .photo{
-width:82px;
-height:82px;
-}
-
-.rank812 .photo,
-.rank2024 .photo{
-width:72px;
-height:72px;
-}
-
-/* text */
-
-.member .name{
-font-size:.8rem;
-}
-
-.vote{
-font-size:.7rem;
-}
-
-.rank-badge{
-font-size:.8rem;
-}
-
-/* table */
 
 table{
-font-size:.8rem;
+border-radius:30px;
+overflow:hidden;
 }
 
-th,
-td{
-padding:8px 6px;
+th{
+background:linear-gradient(90deg,#b8860b,#ffd700,#d4af37)!important;
+color:#222!important;
 }
 
-.ranking-member{
-gap:8px;
+.section{
+position:relative;
+overflow:hidden;
 }
 
-.ranking-member img{
-width:32px;
-height:32px;
+.section::after{
+content:"";
+position:absolute;
+top:0;left:-100%;
+width:100%;height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+animation:sectionshine 12s infinite;
 }
 
-.member-name{
-font-size:.8rem;
+@keyframes sectionshine{
+100%{left:200%;}
 }
 
-.team-pill{
-padding:4px 8px;
-font-size:.65rem;
-}
-
-.vote-count{
-font-size:.75rem;
-}
-
-/* section header table */
-
-.section-header{
-flex-direction:column;
-gap:6px;
-text-align:center;
-}
-
-.section-song{
-text-align:center;
-}
-
+@media(max-width:900px){
+#podium{grid-template-columns:1fr!important;}
+.first{transform:none!important;}
+.stats{margin-top:0;}
 }
 </style>
+
 </head>
 
 <body>
@@ -945,7 +875,7 @@ rank:1,
 name:"Fiony Alveria",
 team:"Love",
 votes:238613,
-photo:"img/fiony.jpg",
+photo:"fiony.jpg",
 profile:"https://jkt48.com/member/detail?member=fiony-alveria-91&type=LOVE",
 },
 
@@ -954,7 +884,7 @@ rank:2,
 name:"Angelina Christy",
 team:"Passion",
 votes:223731,
-photo:"img/christy.jpg",
+photo:"christy.jpg",
 profile:"https://jkt48.com/member/detail?member=angelina-christy-22&type=PASSION",
 },
 
@@ -963,7 +893,7 @@ rank:3,
 name:"Jessica Chandra",
 team:"Passion",
 votes:188732,
-photo:"img/jessi.jpg",
+photo:"jessi.jpg",
 profile:"https://jkt48.com/member/detail?member=jessica-chandra-127&type=PASSION",
 },
 
@@ -972,7 +902,7 @@ rank:4,
 name:"Mutiara Azzahra",
 team:"Passion",
 votes:155988,
-photo:"img/muthe.jpg",
+photo:"muthe.jpg",
 profile:"https://jkt48.com/member/detail?member=mutiara-azzahra-166&type=PASSION",
 },
 
@@ -981,7 +911,7 @@ rank:5,
 name:"Grace Octaviani",
 team:"Love",
 votes:90731,
-photo:"img/gracie.jpg",
+photo:"gracie.jpg",
 profile:"https://jkt48.com/member/detail?member=grace-octaviani-105&type=LOVE",
 },
 
@@ -990,7 +920,7 @@ rank:6,
 name:"Indah Cahya",
 team:"Love",
 votes:81920,
-photo:"img/indah.jpg",
+photo:"indah.jpg",
 profile:"https://jkt48.com/member/detail?member=indah-cahya-116&type=LOVE",
 },
 
@@ -999,7 +929,7 @@ rank:7,
 name:"Freya Jayawardana",
 team:"Dream",
 votes:80156,
-photo:"img/freya.jpeg",
+photo:"freya.jpeg",
 profile:"https://jkt48.com/member/detail?member=freya-jayawardana-94&type=DREAM",
 },
 
@@ -1008,7 +938,7 @@ rank:8,
 name:"Ribka Budiman",
 team:"Passion",
 votes:78217,
-photo:"img/ribka.jpg",
+photo:"ribka.jpg",
 profile:"https://jkt48.com/member/detail?member=ribka-budiman-204&type=PASSION",
 },
 
@@ -1017,7 +947,7 @@ rank:9,
 name:"Kathrina Irene",
 team:"Passion",
 votes:78013,
-photo:"img/kathrina.jpg",
+photo:"kathrina.jpg",
 profile:"https://jkt48.com/member/detail?member=kathrina-irene-143&type=PASSION",
 },
 
@@ -1026,7 +956,7 @@ rank:10,
 name:"Marsha Lenathea",
 team:"Dream",
 votes:77002,
-photo:"img/marsha.jpg",
+photo:"marsha.jpg",
 profile:"https://jkt48.com/member/detail?member=marsha-lenathea-152&type=DREAM",
 },
 
@@ -1035,7 +965,7 @@ rank:11,
 name:"Aurhel Alana",
 team:"Love",
 votes:76797,
-photo:"img/lana.jpg",
+photo:"lana.jpg",
 profile:"https://jkt48.com/member/detail?member=aurhel-alana-33&type=LOVE"
 },
 
@@ -1044,7 +974,7 @@ rank:12,
 name:"Febriola Sinambela",
 team:"Dream",
 votes:75230,
-photo:"img/olla.jpg",
+photo:"olla.jpg",
 profile:"https://jkt48.com/member/detail?member=febriola-sinambela-88&type=DREAM",
 },
 
@@ -1053,7 +983,7 @@ rank:13,
 name:"Gresella Adhalia",
 team:"Dream",
 votes:74765,
-photo:"img/greesel.jpg",
+photo:"greesel.jpg",
 profile:"https://jkt48.com/member/detail?member=greesella-adhalia-107&type=DREAM",
 },
 
@@ -1062,7 +992,7 @@ rank:14,
 name:"Aurellia",
 team:"Love",
 votes:73481,
-photo:"img/lia.jpg",
+photo:"lia.jpg",
 profile:"https://jkt48.com/member/detail?member=aurellia-31&type=LOVE"
 },
 
@@ -1071,7 +1001,7 @@ rank:15,
 name:"Cornelia Vanisa",
 team:"Passion",
 votes:69351,
-photo:"img/oniel.jpg",
+photo:"oniel.jpg",
 profile:"https://jkt48.com/member/detail?member=cornelia-vanisa-59&type=PASSION"
 },
 
@@ -1080,7 +1010,7 @@ rank:16,
 name:"Abigail Rachel",
 team:"Passion",
 votes:67023,
-photo:"img/aralie.jpg",
+photo:"aralie.jpg",
 profile:"https://jkt48.com/member/detail?member=abigail-rachel-1&type=PASSION"
 },
 
@@ -1089,7 +1019,7 @@ rank:17,
 name:"Gita Sekar Andarini",
 team:"Dream",
 votes:66902,
-photo:"img/gita.jpg",
+photo:"gita.jpg",
 profile:"https://jkt48.com/member/detail?member=gita-sekar-andarini-104&type=DREAM"
 },
 
@@ -1098,7 +1028,7 @@ rank:18,
 name:"Catherina Vallencia",
 team:"Passion",
 votes:54738,
-photo:"img/erine.jpg",
+photo:"erine.jpg",
 profile:"https://jkt48.com/member/detail?member=catherina-vallencia-44&type=PASSION"
 },
 
@@ -1107,7 +1037,7 @@ rank:19,
 name:"Helisma Putri",
 team:"Dream",
 votes:53672,
-photo:"img/eli.jpg",
+photo:"eli.jpg",
 profile:"https://jkt48.com/member/detail?member=helisma-putri-112&type=DREAM",
 },
 
@@ -1116,7 +1046,7 @@ rank:20,
 name:"Adeline Wijaya",
 team:"Dream",
 votes:51489,
-photo:"img/delynn.jpg",
+photo:"delynn.jpg",
 profile:"https://jkt48.com/member/detail?member=adeline-wijaya-2&type=DREAM",
 },
 
@@ -1125,7 +1055,7 @@ rank:21,
 name:"Jesslyn Elly",
 team:"Dream",
 votes:50024,
-photo:"img/lyn.jpg",
+photo:"lyn.jpg",
 profile:"https://jkt48.com/member/detail?member=jesslyn-elly-131&type=DREAM"
 },
 
@@ -1134,7 +1064,7 @@ rank:22,
 name:"Jemima Avodie",
 team:"Trainee",
 votes:49827,
-photo:"img/jemima.jpg",
+photo:"jemima.jpg",
 profile:"https://jkt48.com/member/detail?member=jemima-evodie-123&type=TRAINEE"
 },
 
@@ -1143,7 +1073,7 @@ rank:23,
 name:"Michelle Alexandra",
 team:"Love",
 votes:49248,
-photo:"img/michie.jpg",
+photo:"michie.jpg",
 profile:"https://jkt48.com/member/detail?member=michelle-alexandra-159&type=LOVE"
 },
 
@@ -1152,7 +1082,7 @@ rank:24,
 name:"Cynthia Yaputera",
 team:"love",
 votes:48294,
-photo:"img/chyntia.jpg",
+photo:"chyntia.jpg",
 profile:"https://jkt48.com/member/detail?member=cynthia-yaputera-60&type=LOVE",
 }
 ];
